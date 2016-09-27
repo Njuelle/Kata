@@ -1,5 +1,7 @@
 package com.hbdriod.kata;
 
+import android.util.Log;
+
 /**
  * Created by Nico on 27/09/2016.
  */
@@ -13,7 +15,11 @@ public class StringCalculator {
             return 1;
         } else {
             String[] numbers = string.split(",");
-            return Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]);
+            int result = 0;
+            for (int counter = 0; counter <= numbers.length - 1; counter++){
+                result += Integer.parseInt(numbers[counter]);
+            }
+            return result;
         }
     }
 
