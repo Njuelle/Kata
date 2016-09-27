@@ -33,4 +33,10 @@ public class ExampleUnitTest {
         StringCalculator stringCalculator = new StringCalculator();
         assertEquals(6, stringCalculator.add("1,2,3"));
     }
+
+    @Test
+    public void addSumManyNumbersWithNewLines() throws Exception {
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(6, stringCalculator.add("1\n2,3"));
+    }
 }
