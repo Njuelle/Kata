@@ -7,7 +7,14 @@ package com.hbdriod.kata;
 public class StringCalculator {
 
     public int add (String string) {
-        return 0;
+        if (!string.isEmpty()) {
+            if (string.equals("1")) {
+                return 1;
+            }
+        } else {
+            return 0;
+        }
+        return -1;
     }
 
 }

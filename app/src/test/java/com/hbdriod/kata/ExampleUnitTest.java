@@ -9,12 +9,16 @@ import static org.junit.Assert.*;
  */
 public class ExampleUnitTest {
 
-    /**
-     * Test if string is empty, return 0
-     */
+
     @Test
     public void addIsEmpty() throws Exception {
         StringCalculator stringCalculator = new StringCalculator();
         assertEquals(0, stringCalculator.add(""));
+    }
+
+    @Test
+    public void addIsOne() throws Exception {
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(1, stringCalculator.add("1"));
     }
 }
