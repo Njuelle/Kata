@@ -1,7 +1,5 @@
 package com.hbdriod.kata;
 
-import android.util.Log;
-
 /**
  * Created by Nico on 27/09/2016.
  */
