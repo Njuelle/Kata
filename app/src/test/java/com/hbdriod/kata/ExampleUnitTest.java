@@ -21,4 +21,10 @@ public class ExampleUnitTest {
         StringCalculator stringCalculator = new StringCalculator();
         assertEquals(1, stringCalculator.add("1"));
     }
+
+    @Test
+    public void addSum() throws Exception {
+        StringCalculator stringCalculator = new StringCalculator();
+        assertEquals(3, stringCalculator.add("1,2"));
+    }
 }
