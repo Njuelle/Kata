@@ -9,18 +9,22 @@ import java.util.StringTokenizer;
 public class StringCalculator {
 
     public int add (String string) {
-        if (string.isEmpty()) {
-            return 0;
-        } else if (string.equals("1")) {
-            return 1;
-        } else {
-            StringTokenizer st = new StringTokenizer(string,"\n,");
-
-            int result = 0;
-            while (st.hasMoreElements()) {
-                result += Integer.parseInt(st.nextElement().toString());
+        String delimiter = "\n,";
+        if (!string.isEmpty()) {
+            if (string.equals("1")) {
+                return 1;
+            } else if (string.startsWith("//")){
+                delimiter = String.valueOf(string.charAt(2));
+                string = string.substring(4);
             }
-            return result;
+        } else {
+            return 0;
         }
+        StringTokenizer st = new StringTokenizer(string, delimiter);
+        int result = 0;
+        while (st.hasMoreElements()) {
+            result += Integer.parseInt(st.nextElement().toString());
+        }
+        return result;
     }
 }
